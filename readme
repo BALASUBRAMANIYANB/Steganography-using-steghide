@@ -15,16 +15,6 @@ For more information about Steganography :
    
 YouTube video :    https://youtu.be/9UZh-4Er7BQ .
 
-Embed Hidden Data into a File :
-
-Step 1: Using Steghide is very easy. To install it from the terminal in Linux.
-
-# apt-get install steghide 
-
-Step 2 :  Once it's installed, in order to embed data in a file, type the command below.
-
-#steghide embed -ef secretFile -cf coverFile -sf outputFile -z compressionLevel -e scheme
-
 The arguments are broken down as follows:
 •	-ef specifies the path of the file that you want to hide. You can embed any kind of file
 inside of the cover file, including Python scripts or shell files.
@@ -41,22 +31,17 @@ the argument -Z instead.
 In my example, I'm hiding secret text inside an image of a cat. I'm not overwriting the original
 image or compressing it, nor do I care about encryption right now.
 
-#steghide embed -ef secret.txt -cf StegoCat.jpg -e none –Z
-
-Once you have executed the Steghide command, you will be prompted to set a password that will allow
-you to extract the embedded data later. So enter your passphrase and re-enter it to confirm. 
-Once you get used to this process, it'll only take seconds to hide your data inside an image or audio file with Steghide.
-
-
 Extract Hidden Data From the File
 
 STEP 3:
 
-Extracting hidden data from a steganographic image is even easier. The command uses the syntax below.
-
-steghide extract -sf stegoFile -xf outputFile
+Extracting hidden data from a steganographic image is even easier.  
 
 Once you run this command, you'll be prompted to enter the same password you created above
 in order to create the extracted file. It's that simple!
+
+
+
+For commands and execution go to file
 
 
